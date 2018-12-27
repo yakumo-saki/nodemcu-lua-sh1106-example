@@ -9,7 +9,7 @@ https://nodemcu-build.com/
 
 ### enabled modules
 
-デフォルトのモジュールに加えて以下をチェック
+デフォルトのモジュールに加えて以下をチェック  
 (default modules are not written below)
 
 * I2C
