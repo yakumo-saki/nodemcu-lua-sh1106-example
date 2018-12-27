@@ -8,7 +8,10 @@ Display OLED using I2C.
 https://nodemcu-build.com/
 
 ### enabled modules
+
+デフォルトのモジュールに加えて以下をチェック
 (default modules are not written below)
+
 * I2C
 * U8G2
 
