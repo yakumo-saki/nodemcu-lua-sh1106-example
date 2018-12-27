@@ -27,21 +27,42 @@ disp:setFontMode(0)
 disp:setDrawColor(1)
 disp:setBitmapMode(0)
 
-
 disp:drawBox(0, 0, 10, 10)
 disp:sendBuffer()
 
-disp:drawFrame(30,30, 50,50)
+-- https://github.com/olikraus/u8g2/wiki/fntlistall#6-pixel-height
+
+disp:setFont(u8x8_font_artossans8_r)
+
+disp:setFont(u8g2_font_ncenB14_tf);
+disp:setFontDirection(0);
+
+disp:setFont(u8g2_font_m2icon_5_tf)
+disp:setFont(u8g2_font_6x10_tf)
+
+disp:setFont(font_6x10_tf)
+
+disp:clearBuffer()
+disp:setFontMode(1)
+disp:setDrawColor(1)
+-- disp:setFont("u8g2_font_6x10_tf")
 
 
-for i=0,2 do
-	disp:setDrawColor(i)
-	disp:drawBox(i * 8, 0, ((i*8) + 8), 64)
-	disp:sendBuffer()
-end
-disp:setDrawColor(0)
-disp:drawBox(20, 20,30,30)
+-- font
+disp:clearBuffer()
 
--- disp:clearBuffer(disp)
--- disp:drawLine(disp, 10, 10,20,20)
+-- OK
+disp:setFontMode(0)
+disp:setDrawColor(1)
+-- disp:setDrawColor(0)  BAD ! Black background
+disp:setFont(u8g2.font_6x10_tf)
+disp:drawStr(0, 40, "ABCDEFGabcdefg0123456789")
+disp:sendBuffer()
+
+-- OK
+disp:setFontMode(0)
+disp:setDrawColor(1)
+disp:setFont(u8g2.font_unifont_t_symbols)
+disp:drawStr(0, 10, "AbcDefGhi0123456789")
+disp:sendBuffer()
 
