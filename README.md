@@ -1,4 +1,4 @@
-# nodelua-sh1106-example
+# nodemcu-lua-sh1106-example
 
 ESP8266 NodeMCU and Lua SH1106 display
 Display OLED using I2C.
